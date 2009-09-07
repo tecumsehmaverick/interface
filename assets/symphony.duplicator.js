@@ -95,7 +95,7 @@
 					.find('a.destructor:first')
 					.text(strings.destructor);
 				
-				header.nextAll().wrap('<div class="content" />');
+				header.nextAll().wrapAll('<div class="content" />');
 				
 				destructor.click(function() {
 					if (jQuery(this).hasClass('disabled')) return;
