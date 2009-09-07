@@ -77,13 +77,13 @@
 						if (item.is('.collapsed')) {
 							object.removeClass('expanding');
 							item.removeClass('expanding');
-							object.trigger('expandstop', [item]);
+							object.trigger('expandcancel', [item]);
 						}
 						
 						else {
 							object.removeClass('collapsing');
 							item.removeClass('collapsing');
-							object.trigger('collapsestop', [item]);
+							object.trigger('collapsecancel', [item]);
 						}
 					}
 				},
@@ -101,13 +101,21 @@
 				
 				collapseAll: function() {
 					object.find(settings.items).each(function() {
-						jQuery(this).removeClass('expanded').addClass('collapsed');
+						var item = jQuery(this);
+						
+						object.trigger('collapsestart', [item]);
+						item.removeClass('expanded').addClass('collapsed');
+						object.trigger('collapsestop', [item]);
 					});
 				},
 				
 				expandAll: function() {
 					object.find(settings.items).each(function() {
-						jQuery(this).removeClass('collapsed').addClass('expanded');
+						var item = jQuery(this);
+						
+						object.trigger('expandstart', [item]);
+						item.removeClass('collapsed').addClass('expanded');
+						object.trigger('expandstop', [item]);
 					});
 				}
 			};

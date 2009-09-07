@@ -14,6 +14,7 @@
 			destructable:		true,					// Allow destruction of instances?
 			minimum:			0,						// Do not allow instances to be removed below this limit.
 			maximum:			1000,					// Do not allow instances to be added above this limit.
+			speed:				'fast',					// Control the speed of any animations
 			delay_initialize:	false
 		};
 		
@@ -93,7 +94,9 @@
 					.append('<a class="destructor" />')
 					.find('a.destructor:first')
 					.text(strings.destructor);
-					
+				
+				header.nextAll().wrap('<div class="content" />');
+				
 				destructor.click(function() {
 					if (jQuery(this).hasClass('disabled')) return;
 					
@@ -182,6 +185,16 @@
 						if (settings.collapsible) {
 							object.collapsible.cancel();
 						}
+					});
+					
+					// Slide up on collapse:
+					object.bind('collapsestop', function(event, item) {
+						item.find('> .content').show().slideUp(settings.speed);
+					});
+					
+					// Slide down on expand:
+					object.bind('expandstop', function(event, item) {
+						item.find('> .content').hide().slideDown(settings.speed);
 					});
 					
 					widgets.controls = object

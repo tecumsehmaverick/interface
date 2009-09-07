@@ -106,7 +106,15 @@
 			
 			object.orderable = {
 				cancel: function() {
-					stop();
+					jQuery(document).unbind('mousemove', change);
+					jQuery(document).unbind('mouseup', stop);
+					
+					if (state != null) {
+						object.removeClass('ordering');
+						state.item.removeClass('ordering');
+						object.trigger('ordercancel', [state.item]);
+						state = null;
+					}
 				},
 				
 				initialize: function() {
