@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<title>Taggables</title>
+<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+<script type="text/javascript" src="./scripts/jquery.js"></script>
+<script type="text/javascript" src="./scripts/symphony.taggable.js"></script>
+<link rel="stylesheet" type="text/css" href="./scripts/symphony.taggable.css">
+<h1>Taggables</h1>
+<div class="column">
+	<h2>Normal</h2>
+	<div id="demo-a">
+		<input />
+		<ol>
+			<li title="one">One</li>
+			<li title="two">Two</li>
+			<li title="three">Three</li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+		
+		$('#demo-a').taggable().start();
+		
+	</script>
+	<h2>Single</h2>
+	<div id="demo-b">
+		<input />
+		<ol>
+			<li title="one">One</li>
+			<li title="two">Two</li>
+			<li title="three">Three</li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+		
+		jQuery.fn.taggableSingle = function(custom_settings) {
+			var parent = jQuery(this).taggable(custom_settings);
+			var self = this;
+			
+			self.methods = {
+				// Manually edit tags:
+				manual:			function() {
+					var input = self.widgets.input.focus();
+					
+					self.widgets.tags.each(function() {
+						var tag = jQuery(this);
+						var value = tag.attr('title') || tag.text();
+						
+						if (input.val().toLowerCase() == value.toLowerCase()) {
+							tag.addClass('selected');
+							
+						} else {
+							tag.removeClass('selected');
+						}
+					});
+				},
+				
+				// Toggle tag state:
+				toggle:			function(source) {
+					var input = self.widgets.input.focus();
+					var tag = jQuery(source);
+					var value = tag.attr('title') || tag.text();
+					
+					if (!value) return;
+					
+					parent.widgets.tags.removeClass('selected');
+					tag.addClass('selected');
+					
+					input.val(value);
+				}
+			};
+			
+			// Extend parent:
+			return self = jQuery.extend(true, parent, self);
+		};
+		
+		$('#demo-b').taggableSingle().start();
+		
+	</script>
+</div>

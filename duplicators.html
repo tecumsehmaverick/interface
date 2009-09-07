@@ -1,0 +1,472 @@
+<!--
+<title>Duplicators</title>
+<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+<script type="text/javascript" src="./scripts/jquery.js"></script>
+<script type="text/javascript" src="./scripts/symphony.duplicator.js"></script>
+<link rel="stylesheet" type="text/css" href="./scripts/symphony.duplicator.css">
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Symphony &ndash; Parents &ndash; Lord Bacon</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="http://devo.randb.com.au/rowan/symphony-working/symphony/assets/forms.css">
+		<script type="text/javascript" src="http://devo.randb.com.au/rowan/symphony-working/symphony/assets/jquery.js"></script>
+		<script type="text/javascript" src="http://devo.randb.com.au/rowan/symphony-working/symphony/assets/admin.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="http://devo.randb.com.au/rowan/symphony-working/extensions/calendaroverlay/assets/publish.css">
+		<script type="text/javascript" src="./scripts/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="./scripts/symphony.orderable.js"></script>
+		<script type="text/javascript" src="./scripts/symphony.duplicator.js"></script>
+		<link rel="stylesheet" type="text/css" href="./scripts/symphony.duplicator.css">
+	</head>
+	<body>
+		<form>
+			<h1>
+				<a href="http://devo.randb.com.au/rowan/symphony-working/">Symphony CMS</a>
+			</h1>
+			<ul id="nav">
+				<li>Content
+					<ul>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/publish/comments/">Comments</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/publish/notes/">Notes</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/publish/articles/">Articles</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/publish/categories/">Categories</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/publish/messages/">Messages</a>
+						</li>
+					</ul>
+				</li>
+				<li>Blueprints
+					<ul>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/blueprints/pages/">Pages</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/blueprints/components/">Components</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/blueprints/sections/">Sections</a>
+						</li>
+					</ul>
+				</li>
+				<li>System
+					<ul>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/system/authors/">Authors</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/system/preferences/">Preferences</a>
+						</li>
+						<li>
+							<a href="http://devo.randb.com.au/rowan/symphony-working/symphony/system/extensions/">Extensions</a>
+
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<h2>Duplicators</h2>
+			<input name="MAX_FILE_SIZE" type="hidden" value="5242880">
+			<fieldset class="primary">
+				<div class="field field-duplicator">
+					<h3>Orderable</h3>
+					<ol id="demo-a">
+						<li>
+							<h3>Instance One</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Two</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_a = jQuery('#demo-a').symphonyDuplicator({
+							orderable:		true,
+							collapsible:	false,
+							minimum:		1,
+							maximum:		4
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Collapsible</h3>
+					<ol id="demo-b">
+						<li>
+							<h3>Instance One</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Two</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_b = jQuery('#demo-b').symphonyDuplicator({
+							orderable:		false,
+							collapsible:	true,
+							maximum:		5
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Combined</h3>
+					<ol id="demo-c">
+						<li>
+							<h3>Instance One</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Two</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_c = jQuery('#demo-c').symphonyDuplicator({
+							orderable:		true,
+							collapsible:	true,
+							minimum:		2,
+							maximum:		5
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Collapsed</h3>
+					<ol id="demo-d">
+						<li>
+							<h3>Instance One</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Two</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Three</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Four</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_d = jQuery('#demo-d').symphonyDuplicator({
+							orderable:		true,
+							collapsible:	true,
+							maximum:		5
+						});
+						
+						demo_d.each(function() {
+							this.collapsible.collapseAll();
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Empty without templates</h3>
+					<ol id="demo-e">
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_e = jQuery('#demo-e').symphonyDuplicator({
+							orderable:		true,
+							collapsible:	true
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Empty with templates</h3>
+					<ol id="demo-f">
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_f = jQuery('#demo-f').symphonyDuplicator({
+							orderable:		true,
+							collapsible:	true,
+							maximum:		2
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Editable without templates</h3>
+					<ol id="demo-g">
+						<li>
+							<h3>Instance</h3>
+							<p>
+								<input value="One" />
+							</p>
+						</li>
+						<li>
+							<h3>Instance</h3>
+							<p>
+								<input value="Two" />
+							</p>
+						</li>
+						<li class="template">
+							<h3>Instance</h3>
+							<p>
+								<input value="Three" />
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_g = jQuery('#demo-g').symphonyDuplicatorWithName({
+							orderable:		true,
+							collapsible:	true,
+							maximum:		5
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Editable with templates</h3>
+					<ol id="demo-h">
+						<li class="template">
+							<h3>Instance</h3>
+							<p>
+								<input value="Untitled" />
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_h = jQuery('#demo-h').symphonyDuplicatorWithName({
+							orderable:		true,
+							collapsible:	true,
+							maximum:		2
+						});
+						
+					</script>
+				</div>
+			</fieldset>
+			<fieldset class="secondary">
+				<div class="field field-duplicator">
+					<h3>Remove disabled</h3>
+					<ol id="demo-i">
+						<li>
+							<h3>Instance One</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Two</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_i = jQuery('#demo-i').symphonyDuplicator({
+							orderable:		true,
+							collapsible:	true,
+							destructable:	false,
+							maximum:		5
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>Add disabled</h3>
+					<ol id="demo-j">
+						<li>
+							<h3>Instance One</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Two</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_j = jQuery('#demo-j').symphonyDuplicator({
+							orderable:		true,
+							collapsible:	true,
+							constructable:	false
+						});
+						
+					</script>
+				</div>
+				<div class="field field-duplicator">
+					<h3>All disabled</h3>
+					<ol id="demo-k">
+						<li>
+							<h3>Instance One</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li>
+							<h3>Instance Two</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template collapsed">
+							<h3>Template Collapsed</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+						<li class="template">
+							<h3>Template Expanded</h3>
+							<p>
+								Content goes here.
+							</p>
+						</li>
+					</ol>
+					<script type="text/javascript">
+						
+						var demo_k = jQuery('#demo-k').symphonyDuplicator({
+							orderable:		false,
+							collapsible:	false,
+							destructable:	false,
+							constructable:	false
+						});
+						
+					</script>
+				</div>
+			</fieldset>
+			<div class="actions">
+				<input name="action[save]" accesskey="s" type="submit" value="Save Changes">
+				<button name="action[delete]" class="confirm delete" title="Delete this entry">Delete</button>
+			</div>
+			<ul id="usr">
+				<li>
+					<a href="#">Kevin Bacon</a>
+				</li>
+				<li>
+					<a href="#">Logout</a>
+				</li>
+			</ul>
+		</form>
+	</body>
+</html>

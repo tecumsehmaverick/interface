@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<title>Plugin Pattern</title>
+<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+<script type="text/javascript" src="./scripts/jquery.js"></script>
+<script type="text/javascript" src="./scripts/symphony.pattern.js"></script>
+<link rel="stylesheet" type="text/css" href="./scripts/symphony.pattern.css">
+<h1>Plugin Pattern</h1>
+<div class="column">
+	<h2>Normal</h2>
+	<div id="demo-a">
+		<input />
+		<ol>
+			<li title="one">One</li>
+			<li title="two">Two</li>
+			<li title="three">Three</li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+		
+		jQuery.fn.pluginA = function(custom_settings) {
+			var self = this;
+			
+			self.test = function() {
+				console.log('A');
+			};
+			
+			return self;
+		};
+		
+		jQuery.fn.pluginB = function(custom_settings) {
+			var self = this;
+			var parent = jQuery(this).pluginA();
+			
+			// Extend parent:
+			jQuery.extend(true, self, parent);
+			
+			self.test = function() {
+				parent.test();
+				console.log('B');
+			};
+			
+			return self;
+		};
+		
+		$('#demo-a').pluginB().test();
+		
+	</script>
+	<h2>Single</h2>
+	<div id="demo-b">
+		<input />
+		<ol>
+			<li title="one">One</li>
+			<li title="two">Two</li>
+			<li title="three">Three</li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+		
+		//$('#demo-b').taggableSingle().start();
+		
+	</script>
+</div>

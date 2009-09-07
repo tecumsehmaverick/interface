@@ -1,0 +1,46 @@
+/*-----------------------------------------------------------------------------
+	Options plugin
+-----------------------------------------------------------------------------*/
+	
+	.symphony-select {
+		background: red;
+		width: 100%;
+	}
+	.symphony-select > .contents > .selected {
+		background: black;
+		color: red;
+	}
+	
+	.symphony-select > .controls {
+		background: #bbbbbf;
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bbbbbf), to(#aaaaaf));
+		border-bottom: 1px solid #88888f;
+		border-top: 1px solid #dddddf;
+		cursor: default;
+		line-height: 2.4;
+		padding: 0 19px;
+		text-align: right;
+	}
+	.symphony-select > .controls > * {
+		display: inline-block;
+		margin: 0 0 0 1em;
+	}
+	.symphony-select > .controls > a,
+	.symphony-select > .controls > input {
+		background: transparent;
+		color: #24384b;
+		cursor: pointer;
+		text-decoration: none;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	}
+	.symphony-select > .controls > select {
+		margin: 0 0 0 1em;
+	}
+	.symphony-select > .controls > a:hover {
+		color: #000000;
+	}
+	.symphony-select > .controls > a.disabled {
+		display: none;
+	}
+	
+/*---------------------------------------------------------------------------*/

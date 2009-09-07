@@ -1,0 +1,35 @@
+/*-----------------------------------------------------------------------------
+	Taggable plugin
+-----------------------------------------------------------------------------*/
+	
+	.taggable {
+		background: #eeeeef;
+		border: 1px solid #dddddf;
+	}
+	.taggable > .contents {
+		overflow: hidden;
+	}
+	
+	.taggable > .contents > input {
+		border-bottom: 1px solid #dddddf;
+		padding: 0.5em 1em;
+		width: 100%;
+	}
+	
+	.taggable > .contents > ol {
+		margin: 0 1em;
+	}
+	.taggable > .contents > ol > .tag {
+		color: #99999f;
+		cursor: pointer;
+		float: left;
+		margin: 0.5em 0.5em 0.5em 0;
+	}
+	.taggable > .contents > ol > .tag:hover {
+		color: #77777f;
+	}
+	.taggable > .contents > ol > .tag.selected {
+		color: #55555f;
+	}
+	
+/*---------------------------------------------------------------------------*/

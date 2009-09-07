@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<title>Tables</title>
+<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+<script type="text/javascript" src="./scripts/jquery.js"></script>
+<script type="text/javascript" src="./scripts/symphony.tables.js"></script>
+<link rel="stylesheet" type="text/css" href="./scripts/symphony.tables.css">
+<h1>Tables</h1>
+<div class="column">
+	<h2>Selectable</h2>
+	<table id="demo-a">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Template</th>
+				<th scope="col">Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/7/" title="two">Test: Two</a>
+					<input name="items[7]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_two/">test_two.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/5/" title="test">Test</a>
+					<input name="items[5]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test/">test.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/8/" title="three">Test: Three</a>
+					<input name="items[8]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three/">test_three.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/11/" title="six">Test: Six</a>
+					<input name="items[11]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_six/">test_six.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/14/" title="neat">Test: Three: Four: Four: Four: Four: Four: Four: Four: Four: Four</a>
+					<input name="items[14]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three_neat/">test_three_neat.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/18/" title="woot">WOOT</a>
+					<input name="items[18]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/woot/">woot.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		
+		var table = $('#demo-a').tables({
+			selectable:		true
+		});
+		
+	</script>
+	<h2>Orderable</h2>
+	<table id="demo-b">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Template</th>
+				<th scope="col">Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/7/" title="two">Test: Two</a>
+					<input name="items[7]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_two/">test_two.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/5/" title="test">Test</a>
+					<input name="items[5]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test/">test.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/8/" title="three">Test: Three</a>
+					<input name="items[8]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three/">test_three.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/11/" title="six">Test: Six</a>
+					<input name="items[11]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_six/">test_six.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/14/" title="neat">Test: Three: Four: Four: Four: Four: Four: Four: Four: Four: Four</a>
+					<input name="items[14]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three_neat/">test_three_neat.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/18/" title="woot">WOOT</a>
+					<input name="items[18]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/woot/">woot.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+		</tbody>
+		<tfoot class="controls">
+			<tr>
+				<td>
+					<select name="with-selected">
+						<option value="">With Selected...</option>
+						<option value="delete">Delete</option>
+						<option value="delete-entries">Delete Entries</option>
+					</select>
+					<input name="action[apply]" type="submit" value="Apply">
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<script type="text/javascript">
+		
+		$('#demo-b').tables({
+			orderable:		true
+		});
+		
+	</script>
+</div>
+<div class="column">
+	<h2>Combined</h2>
+	<table id="demo-c">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Template</th>
+				<th scope="col">Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/7/" title="two">Test: Two</a>
+					<input name="items[7]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_two/">test_two.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/5/" title="test">Test</a>
+					<input name="items[5]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test/">test.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/8/" title="three">Test: Three</a>
+					<input name="items[8]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three/">test_three.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/11/" title="six">Test: Six</a>
+					<input name="items[11]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_six/">test_six.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/14/" title="neat">Test: Three: Four: Four: Four: Four: Four: Four: Four: Four: Four</a>
+					<input name="items[14]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three_neat/">test_three_neat.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/18/" title="woot">WOOT</a>
+					<input name="items[18]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/woot/">woot.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+		</tbody>
+		<tfoot class="controls">
+			<tr>
+				<td>
+					<select name="with-selected">
+						<option value="">With Selected...</option>
+						<option value="delete">Delete</option>
+						<option value="delete-entries">Delete Entries</option>
+					</select>
+					<input name="action[apply]" type="submit" value="Apply">
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<script type="text/javascript">
+		
+		$('#demo-c').tables({
+			selectable:		true,
+			orderable:		true
+		});
+		
+	</script>
+	<h2>Disabled</h2>
+	<table id="demo-d">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Template</th>
+				<th scope="col">Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/7/" title="two">Test: Two</a>
+					<input name="items[7]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_two/">test_two.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/5/" title="test">Test</a>
+					<input name="items[5]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test/">test.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/8/" title="three">Test: Three</a>
+					<input name="items[8]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three/">test_three.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/11/" title="six">Test: Six</a>
+					<input name="items[11]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_six/">test_six.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/14/" title="neat">Test: Three: Four: Four: Four: Four: Four: Four: Four: Four: Four</a>
+					<input name="items[14]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/test_three_neat/">test_three_neat.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/edit/18/" title="woot">WOOT</a>
+					<input name="items[18]" type="checkbox">
+				</td>
+				<td>
+					<a href="http://devo.randb.com.au/rowan/symphony/symphony/blueprints/pages/template/woot/">woot.xsl</a>
+				</td>
+				<td class="inactive">None</td>
+			</tr>
+		</tbody>
+		<tfoot class="controls">
+			<tr>
+				<td>
+					<select name="with-selected">
+						<option value="">With Selected...</option>
+						<option value="delete">Delete</option>
+						<option value="delete-entries">Delete Entries</option>
+					</select>
+					<input name="action[apply]" type="submit" value="Apply">
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<script type="text/javascript">
+		
+		$('#demo-d').tables();
+		
+	</script>
+</div>

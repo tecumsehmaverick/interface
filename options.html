@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<title>Options</title>
+<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+<script type="text/javascript" src="./scripts/jquery.js"></script>
+<script type="text/javascript" src="./scripts/symphony.button.js"></script>
+<script type="text/javascript" src="./scripts/symphony.selectable.js"></script>
+<script type="text/javascript" src="./scripts/symphony.options.js"></script>
+<link rel="stylesheet" type="text/css" href="./scripts/symphony.options.css">
+<h1>Options</h1>
+<div class="column">
+	<h2>Multiselect</h2>
+	<div id="demo-a">
+		<select name="fields[test]" multiple="multiple">
+			<option value="one" selected="selected">One</option>
+			<option value="two">Two</option>
+			<option value="three">Three</option>
+			<option value="four">Four</option>
+			<option value="five">Five</option>
+			<option value="six">Six</option>
+			<option value="seven">Seven</option>
+		</select>
+	</div>
+	<script type="text/javascript">
+		
+		$('#demo-a').symphonySelect();
+		
+	</script>
+</div>
