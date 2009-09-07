@@ -31,9 +31,8 @@
 	-------------------------------------------------------------------------*/
 		
 		if (settings.collapsible) objects = objects.symphonyCollapsible({
-			items:				'.instance',
-			handles:			'.header',
-			delay_initialize:	true
+			items:			'.instance',
+			handles:		'.header'
 		});
 		
 	/*-------------------------------------------------------------------------
@@ -41,9 +40,8 @@
 	-------------------------------------------------------------------------*/
 		
 		if (settings.orderable) objects = objects.symphonyOrderable({
-			items:				'.instance',
-			handles:			'.header',
-			delay_initialize:	true
+			items:			'.instance',
+			handles:		'.header'
 		});
 		
 	/*-------------------------------------------------------------------------
@@ -185,6 +183,11 @@
 						if (settings.collapsible) {
 							object.collapsible.cancel();
 						}
+					});
+					
+					// Refresh on reorder:
+					object.bind('orderstop', function() {
+						refresh();
 					});
 					
 					// Slide up on collapse:
