@@ -108,7 +108,7 @@
 				
 				return instance;
 			};
-				
+			
 			// Refresh disabled states:
 			var refresh = function() {
 				var constructor = settings.constructable;
